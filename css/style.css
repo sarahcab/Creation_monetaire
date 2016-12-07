@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'WalbaumgrotBook';
+    src:url("../ressources/polices/walbaumgroteskbook/WalbaumGroteskBook.otf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+}
+
+.bouts{
+	border-style : solid;
+	border-width : 3px;
+	border-color : #FFFFFF;
+	border-radius: 20px;
+	padding: 6px 8px;
+	background: #f6e9d9;
+	color: #333333;
+	transition-duration:.2s;
+	transition-property: background;
+	-moz-transition-duration:.2s;
+	-moz-transition-property: background;
+	-webkit-transition-duration:.2s;
+	-webkit-transition-property: background;
+	font-family: WalbaumgrotBook, helvetica, arial, sans-serif;
+	font-size : 14px;
+	margin-left : 5px;
+}
+
+.bouts:hover{
+	background: #be2e0d !important;
+	color: #ffffff !important;
+	cursor:pointer !important;
+}
+
+
+.on{
+	background: #333333 !important;
+}
+
+#permanent{
+	font-size : 13px;
+	margin-top : -50px;
+	margin-left : 10.5px;
+	margin-bottom : 0;
+}
+
+#commentaire{
+	width:1190px;
+	margin-left : 10.5px;
+}
+
+#divBouton{
+	text-align : center;
+	width : 1200px;
+	height : 27.9px;
+	position : absolute;
+}
+
+#content{
+	display : none;
+	height : 500px;	
+}
+
+#anime{
+	z-index : 1
+}
+
+#fond{
+	z-index : -1
+}
+
+.boule:hover{
+	cursor : pointer  !important;
+}
+.debitDroite{
+	animation: tourneD 5s linear;
+	animation-iteration-count : infinite;
+	/*transform-origin: 832.605px 329.171px;*/
+}
+
+
+@keyframes tourneD {
+	from {transform: rotate(0deg);}
+
+	to   {transform: rotate(360deg);}
+}
+
+.debitGauche{
+	animation: tourneG 5s linear;
+	animation-iteration-count : infinite;
+}
+
+@keyframes tourneG {
+	from {transform: rotate(0deg);}
+	to   {transform: rotate(-360deg);}
+}
+
+.clignote{
+	animation: gonfle 3s linear;
+	animation-iteration-count : infinite;
+}
+
+@keyframes gonfle {
+	0%   {transform: scale(1);
+		opacity : 1}
+    50%  {transform: scale(1.5);
+		opacity : 0.95}
+    100% {transform: sclae(1);
+		opacity : 1}
+}
+
+#init, #avancer{
+	display : none;
+	overflow : hidden;
+	z-index : 1;
+	margin-top :65px;
+}
+#avancer{
+	margin-right: 65px;
+}
+#init{
+	margin-left: -35px;
+}
+
+#cache{
+	width : 350px;
+	margin-top : -50px;
+	margin-left : 400px;
+	height : 80px;
+	position : absolute;
+}
+
+#decompte{
+	font-size : 28px;
+	text-align : center;
+}
+
+#fond_gris{
+	position:absolute;
+	width : 1138px;
+	height : 550px;
+	margin-top : -4.90px;
+}
+
+#bouton_0{
+	width : 350px;
+	height : 200px;
+	margin-top : 170px;
+	margin-left : 400px;
+	position : absolute;
+	border-radius: 80px;
+	font-size : 20px;
+	border-width:20px;
+	border-color : #FFFFFF;
+	opacity : 0.97;
+}
+
+#bouton_l{
+	border-radius : 20px;
+	width: 45px;
+	height: auto;
+	padding : 4px 7px;
+}
+
+#rules{
+	display : none;
+	position : absolute;
+	margin-top : 170px;
+	margin-left : 380px;
+	font-size : 20px;
+	z-index : 0;
+}
+
+
+#rempli{
+	display : none;
+}
+
+#attente{
+	position : absolute;
+	margin-top : 100px;
+	margin-left : 550px;
+	display : none;
+}
+
+.chaine{
+	stroke-linecap : round ;
+	stroke-dasharray: 4,12;
+	animation: tourne 10s linear;
+	stroke-dashoffset: 300;
+	stroke: #000000;
+	animation-iteration-count : infinite;
+}
+
+.chainespi{
+	stroke-linecap : round ;
+	stroke-dasharray: 2,6;
+	animation: tourne 20s linear;
+	stroke-dashoffset: 300;
+	stroke: #000000;
+	animation-iteration-count : infinite;
+}
+
+@keyframes tourne {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
